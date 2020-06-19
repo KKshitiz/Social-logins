@@ -58,7 +58,7 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.send({ message: err.message, error: err });
 });
-app.listen(3000, () => {
+app.listen(3000 || process.env.PORT, () => {
   console.log("Server is runnig on port 8080");
 });
 module.exports = app;
